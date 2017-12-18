@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/tab_shift_main_bt_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_shift_tablayout_fragment"/>
+    <Button
+        android:id="@+id/tab_shift_main_bt_bottomnav1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_shift_viewpager_fragment1"/>
+
+    <Button
+        android:id="@+id/tab_shift_main_bt_fragmenttabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_shift_fragmenttabhost"/>
+
+    <Button
+        android:id="@+id/tab_shift_main_bt_fragmenthideshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_shift_fragment_hide_show"/>
+
+    <Button
+        android:id="@+id/tab_shift_main_bt_bottomnavigationview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_shift_bottomnavigationview"/>
+
+</LinearLayout>

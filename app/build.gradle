@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file('C:/Users/Melvin/Desktop/MyStudyProject/app/MyStudyProject.jks')
+            storePassword KEYSTORE_PASSWORD
+        }
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    //localBuildToolsVersion是gradle.properties中的数据,这里间接引用了
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            //更改AndroidManifest.xml中预先定义好占位符信息
+            //manifestPlaceholders = [app_icon: "@drawable/icon"]
+            //不显示Log
+            // buildConfigField "boolean", "LEO_DEBUG", "false"
+            //Proguard
+            minifyEnabled true
+            // 缩减resource文件
+            shrinkResources true
+            //是否zip对齐
+            zipAlignEnabled true
+            //签名
+            signingConfig signingConfigs.config
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //给applicationId添加后缀“.debug”
+            //  applicationIdSuffix ".debug"
+
+            //manifestPlaceholders = [app_icon: "@drawable/launch_beta"]
+
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //router
+    annotationProcessor rootProject.ext.dependencies["ActivityRouterAnnotation"]
+    if (isModule.toBoolean()) {
+        //公共库
+        compile project(':melvincommon')
+    } else {
+        //业务组件
+        compile project(":module_main")
+        compile project(":pulltorefresh")
+
+    }
+}

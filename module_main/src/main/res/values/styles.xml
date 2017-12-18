@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--splash界面全屏-->
+    <style name="module_main_fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--recyclerView分割线主题-->
+    <style name="module_main_recyclerview_style" parent="AppTheme">
+        <item name="android:listDivider">@drawable/list_divider_shape</item>
+    </style>
+</resources>

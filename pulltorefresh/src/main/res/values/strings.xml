@@ -1,0 +1,7 @@
+<resources>
+    <string name="pull_to_refresh_app_name">PullToRefresh</string>
+    <string name="pull_to_refresh_xrecyclerview">XRecyclerview</string>
+    <string name="pull_to_refresh_lrecyclerview">LRecyclerview</string>
+    <string name="pull_to_refresh_swiperefresh">SwipeRefresh</string>
+    <string name="pull_to_refresh_lrecyclerview_header">this is header</string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".bottomNav1.BottomNav1Activity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/bottomnav1_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <!--导航栏-->
+    <include layout="@layout/tab_shift_bottom_nav"/>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:background="@android:color/darker_gray"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--&lt;!&ndash;1,&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_bottomnav1_chat"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_bottomnav1_chat"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/tab_shift_tab_chat"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bottomnav1_chat"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@drawable/tab_shift_tab_textview"-->
+                <!--android:text="chat"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;2,&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_bottomnav1_friends"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_bottomnav1_friends"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/tab_shift_tab_friends"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bottomnav1_friends"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@drawable/tab_shift_tab_textview"-->
+                <!--android:text="friends"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;3,&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_bottomnav1_contacts"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_bottomnav1_contacts"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/tab_shift_tab_contacts"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bottomnav1_contacts"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@drawable/tab_shift_tab_textview"-->
+                <!--android:text="contacts"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;4,&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_bottomnav1_setting"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:gravity="center">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_bottomnav1_setting"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/tab_shift_tab_setting"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bottomnav1_setting"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@drawable/tab_shift_tab_textview"-->
+                <!--android:text="setting"/>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

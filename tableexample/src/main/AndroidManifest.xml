@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+          package="com.melvin.tableexample"
+    >
+
+    <application android:theme="@style/AppTheme">
+
+        <activity android:name=".MainTableExampleActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".timetable1.ui.TimeTable1Activity"
+                  android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

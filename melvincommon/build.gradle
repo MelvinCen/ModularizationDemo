@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        if (isModule.toBoolean()) {
+            buildConfigField 'boolean', 'LOG_TOGGLE', 'true'
+        } else {
+            buildConfigField 'boolean', 'LOG_TOGGLE', 'false'
+        }
+
+    }
+
+//    publishNonDefault true
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //Android Support
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["support_v4"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["buttherknife"]
+    annotationProcessor rootProject.ext.dependencies["buttherknife-annotation"]
+    //网络请求相关
+    compile rootProject.ext.dependencies["okhttp3-logging-interceptor"]
+    compile rootProject.ext.dependencies["retrofit"]
+    compile rootProject.ext.dependencies["retrofit-converter-gson"]
+    compile rootProject.ext.dependencies["retrofit-rxjava2-adapter"]
+    compile rootProject.ext.dependencies["rxjava2"]
+    compile rootProject.ext.dependencies["rxandroid2"]
+    compile rootProject.ext.dependencies["recyclerView"]
+    //图片加载库
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["glide-okhttp3-integration"]
+    //事件分发
+    compile rootProject.ext.dependencies["event"]
+    //缓存
+    compile rootProject.ext.dependencies["hawk"]
+    //6.0权限申请
+    compile rootProject.ext.dependencies["rxpermissions2"]
+    //日志
+    compile rootProject.ext.dependencies["logger"]
+    //router
+    compile rootProject.ext.dependencies["ActivityRouter"]
+    compile rootProject.ext.dependencies["recyclerview"]
+    compile rootProject.ext.dependencies["cardview"]
+    compile rootProject.ext.dependencies["superAdapter"]
+    compile(rootProject.ext.dependencies["LRecyclerview"]) {
+        exclude group: 'android.support.v4'//根据包名排除
+
+    }
+    //    compile (rootProject.ext.dependencies["XRecyclerview"]) {
+    //        exclude group: 'android.support.v4'//根据包名排除
+    //
+    //    }
+    compile rootProject.ext.dependencies["zxing"]
+    compile rootProject.ext.dependencies["andpermission"]
+}

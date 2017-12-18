@@ -1,0 +1,1 @@
+include ':app', ':melvincommon', ':module_main', ':pulltorefresh', ':frametabshift', ':tableexample', ':barcodescan'

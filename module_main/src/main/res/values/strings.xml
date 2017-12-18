@@ -1,0 +1,5 @@
+<resources>
+    <string name="module_main_app_name">Module_main</string>
+    <string name="module_main_pull_to_refresh">pullToRefresh系列</string>
+    <string name="module_main_tab_shift">tab切换系列</string>
+</resources>
